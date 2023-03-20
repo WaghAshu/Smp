@@ -1,0 +1,55 @@
+@import "@/styles/_config.scss";
+
+.UpdatesStrip {
+  background: url(/GridBgVector.svg);
+  border-radius: 10px;
+  border: 1px solid black;
+  margin: 2.5rem 0rem 2rem 0rem;
+  height: 8rem;
+  box-shadow: 5px 5px 0px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    overflow: hidden;
+
+    padding: 0.5rem 0rem 0.5rem 0rem;
+  }
+}
+
+.TiltedStrip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+
+  background-color: #fabe75;
+  width: 200%;
+  transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.MainStrip {
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  overflow: hidden;
+  background-color: transparent;
+  background-color: #8eebf5;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  & div {
+    &::after {
+      color: red;
+      background: none !important;
+      height: 0;
+    }
+    &::before {
+      height: 0;
+      background: none !important;
+    }
+  }
+}

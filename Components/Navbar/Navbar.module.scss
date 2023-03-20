@@ -1,3 +1,141 @@
+@import "@/styles/_config.scss";
+
 .Navbar {
   position: sticky;
+  top: 1.5em;
+  height: 4rem;
+  padding: 0.4em 4% 0.4em 4%;
+  margin-bottom: 2.6em;
+
+  background-color: $color-white;
+  border: 1px solid $primary-font-color;
+  box-shadow: 6px 6px $primary-font-color;
+  border-radius: 10px;
+
+  font-family: $primary-font-style;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1000;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 100px) {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 0px auto 0px auto;
+    max-width: 90vw;
+  }
+
+  @media (min-width: 576px) {
+    padding-right: 0px;
+    padding-left: 0px;
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1500px) {
+    max-width: 1350px;
+  }
+
+  @media (min-width: 1900px) {
+    max-width: 1750px;
+  }
+}
+
+.NavLogo {
+  display: flex;
+  align-items: center;
+  margin-left: 1.4rem;
+  text-decoration: none;
+  user-select: none;
+  color: black;
+
+  div {
+    font-weight: 900;
+    font-size: larger;
+    font: $secondary-font-style;
+  }
+}
+
+.Nav_Links_And_Buttons {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $secondary-font-color;
+    text-decoration: none;
+    margin-right: 1.4rem;
+    transition: 300ms;
+    font-weight: bold;
+
+    &:hover {
+      color: $primary-font-color;
+
+      // font-weight: bold;
+    }
+  }
+
+  .activeLink {
+    color: $primary-font-color;
+    // text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  div {
+    margin-left: 0.55rem;
+    margin-right: 1.55rem;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 6px 16px;
+    font-weight: 500;
+    gap: 5px;
+
+    background: #8eebf5;
+    border: 1px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    border-radius: 5px;
+
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+  }
+
+  @media (max-width: 800px) {
+    // max-width: 1750px;
+    display: none;
+  }
+}
+
+.HamburgerIcon {
+  transform: translate(-1rem, 0.1rem);
+  display: none;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
+.HamburgerMenu {
+  display: none;
+  z-index: 1001;
+  position: fixed;
 }
